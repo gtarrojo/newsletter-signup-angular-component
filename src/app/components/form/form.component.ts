@@ -1,9 +1,12 @@
 import { Component } from "@angular/core";
+import { FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-form",
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: "./form.component.html",
   styleUrl: "./form.component.css",
 })
-export class FormComponent {}
+export class FormComponent {
+  email = new FormControl("", Validators.required);
+}
