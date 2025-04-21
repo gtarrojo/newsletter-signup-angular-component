@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { FormComponent } from "./components/main/main.component";
+import { MainComponent } from "./components/main/main.component";
 
 @Component({
   selector: "app-root",
-  imports: [RouterOutlet, FormComponent],
+  imports: [RouterOutlet, MainComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })
