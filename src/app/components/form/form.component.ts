@@ -8,5 +8,9 @@ import { FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
   styleUrl: "./form.component.css",
 })
 export class FormComponent {
-  email = new FormControl("", Validators.required);
+  email = new FormControl("", [
+    Validators.required,
+    Validators.email,
+    Validators.minLength(3),
+  ]);
 }
