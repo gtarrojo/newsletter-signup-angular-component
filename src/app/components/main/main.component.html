@@ -1,26 +1,38 @@
-<article>
-  <picture>
-    <source
-      media="(min-width: 798px)"
-      srcset="illustration-sign-up-desktop.svg"
-    />
-    <img src="illustration-sign-up-mobile.svg" alt="" />
-  </picture>
-  <h2>Stay updated!</h2>
-  <p>Join 60,000+ product managers receiving monthly updates on:</p>
-  <ul>
-    <li>
-      <img src="icon-list.svg" alt="" />
-      <p>Product discovery and building what matters</p>
-    </li>
-    <li>
-      <img src="icon-list.svg" alt="" />
-      <p>Measuring to ensure updates are a success</p>
-    </li>
-    <li>
-      <img src="icon-list.svg" alt="" />
-      <p>And much more!</p>
-    </li>
-  </ul>
-  <app-form></app-form>
-</article>
+<div class="container">
+  <article class="signup">
+    <picture class="signup__img">
+      <source
+        media="(min-width: 798px)"
+        srcset="illustration-sign-up-desktop.svg"
+      />
+      <img
+        class="signup__img"
+        src="illustration-sign-up-mobile.svg"
+        alt="signup"
+      />
+    </picture>
+    <div class="signup--container">
+      <h2 class="signup__heading">Stay updated!</h2>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="signup__list">
+        <li class="signup__list__item">
+          <img class="signup__list__icon" src="icon-list.svg" alt="" />
+          <p class="signup__list__text">
+            Product discovery and building what matters
+          </p>
+        </li>
+        <li class="signup__list__item">
+          <img class="signup__list__icon" src="icon-list.svg" alt="" />
+          <p class="signup__list__text">
+            Measuring to ensure updates are a success
+          </p>
+        </li>
+        <li class="signup__list__item">
+          <img class="signup__list__icon" src="icon-list.svg" alt="" />
+          <p class="signup__list__text">And much more!</p>
+        </li>
+      </ul>
+      <app-form></app-form>
+    </div>
+  </article>
+</div>
