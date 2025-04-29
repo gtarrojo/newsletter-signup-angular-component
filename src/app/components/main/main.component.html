@@ -1,3 +1,5 @@
+@if (!success) {
+
 <div class="container">
   <article class="signup">
     <picture class="signup__img">
@@ -32,7 +34,26 @@
           <p class="signup__list__text">And much more!</p>
         </li>
       </ul>
-      <app-form></app-form>
+      <app-form
+        (sendValue)="onSendValue($event)"
+        (showSuccess)="onShowSuccess($event)"
+      ></app-form>
     </div>
   </article>
 </div>
+} @if (success) {
+<section>
+  <div class="success--desktop">
+    <article class="success">
+      <img class="success__icon" src="icon-success.svg" alt="success" />
+      <h2 class="success__heading">Thanks for subscribing!</h2>
+      <p class="success__text">
+        A confirmation email has been sent to <span>{{ emailValue }}</span
+        >. Please open it and click the button inside to confirm your
+        subscription
+      </p>
+      <button (click)="dismiss()" class="success__btn">Dismiss message</button>
+    </article>
+  </div>
+</section>
+}

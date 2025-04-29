@@ -16,8 +16,10 @@
   padding: 2rem;
 }
 
-.signup__heading {
+.signup__heading,
+.success__heading {
   font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
 /* list  */
@@ -32,4 +34,109 @@
 .signup__list__icon {
   height: 24px;
   width: 24px;
+}
+
+@media (min-width: 798px) {
+  .signup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 32px;
+    align-items: center;
+    max-width: 850px;
+    gap: 0;
+    padding: 1rem;
+  }
+
+  .signup__img {
+    order: 1;
+    max-width: 100%;
+    /* margin: auto; */
+  }
+}
+
+/* success  */
+
+.success {
+  background-color: white;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+.success__icon {
+  display: block;
+  height: 70px;
+  width: 70px;
+  margin-top: 4rem;
+}
+
+.success__heading {
+  margin-top: 2rem;
+}
+
+.success__text {
+  font-weight: 500;
+}
+
+.success__text span {
+  font-weight: 700;
+}
+
+.success__btn {
+  display: block;
+  color: white;
+  padding: 1rem;
+  background-color: var(--color-blue-800);
+  border-radius: 12px;
+  font-weight: 700;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  transition: transform 0.2s, background-image 0.3s;
+}
+
+.success__btn:hover,
+.success__btn:focus {
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    hsl(4, 100%, 60%),
+    hsl(4, 100%, 70%)
+  );
+  box-shadow: 0px 10px 20px hsla(4, 100%, 67%, 0.4);
+  transform: scale(0.98);
+}
+
+.success__btn:active {
+  transform: translateY(4px);
+}
+
+@media (min-width: 550px) {
+  .success {
+    max-width: 400px;
+
+    margin: 5rem auto 0 auto;
+    border-radius: 32px;
+    padding: 2rem;
+  }
+  .success__icon {
+    margin-top: 0;
+  }
+
+  .success__text {
+    max-width: 40ch;
+  }
+
+  .success--desktop {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+  }
+
+  .success__btn {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
 }

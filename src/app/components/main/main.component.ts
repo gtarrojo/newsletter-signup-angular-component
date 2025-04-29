@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { FormComponent } from "../form/form.component";
+import { FormComponent } from "../main/form/form.component";
 
 @Component({
   selector: "app-main",
@@ -7,4 +7,19 @@ import { FormComponent } from "../form/form.component";
   templateUrl: "./main.component.html",
   styleUrl: "./main.component.css",
 })
-export class MainComponent {}
+export class MainComponent {
+  emailValue: string = "";
+  success: boolean = false;
+
+  onSendValue(value: string) {
+    this.emailValue = value;
+  }
+
+  onShowSuccess(success: boolean) {
+    this.success = success;
+  }
+
+  dismiss() {
+    this.success = false;
+  }
+}
